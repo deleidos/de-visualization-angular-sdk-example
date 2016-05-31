@@ -1,0 +1,32 @@
+body {
+    font: 14px sans-serif;
+}
+
+.axis path, .axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.axis path{
+    fill: none;
+    /*stroke: none;*/
+    /*shape-rendering: crespEdges;*/
+}
+
+.bar {
+    fill: steelblue;
+    stroke: black;
+}
+
+.bar:hover {
+    fill: #23415a;
+}
+
+div.bar-chart {
+    padding: 20px 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #eee;
+    border-radius: 6px;
+}

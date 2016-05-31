@@ -1,0 +1,21 @@
+<div class="container form-horizontal">
+    <div class="bar-chart" id="chart">
+        <div class="form-group">
+            <div class="col-sm-6">
+                <select id="dataSetSelect" class="form-control" ng-model="dataIndex">
+                    <option ng-repeat="field in rawData.meta.view.columns" value="{{$index}}" ng-if="$index >= 9">
+                        {{field.name}}
+                    </option>
+                </select>
+            </div>
+            <label for="dataSetSelect" class="control-label">by MD county</label>
+        </div>
+
+        <chart-form ng-show="dataIndex"></chart-form>
+        <bar-chart ng-if="dataIndex" height="600" data="data" mouseenter="mouseenter(args)" mouseleave="mouseleave(args)"></bar-chart>
+    </div>
+    <div ng-if="!dataIndex" class="alert alert-info">
+        <i class="fa fa-info-circle"></i>
+        Choose what type of data you want to see from the dropdown above to get started.
+    </div>
+</div>
